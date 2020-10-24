@@ -34,7 +34,7 @@ namespace NLayer.Negocio
             
         }
 
-        public int InsertarCliente(string nombre, string apellido, string direccion)
+        public int InsertarCliente(string nombre, string apellido, string direccion, string dni, string mail, string telefono, DateTime fechaNachimiento)
         {
             // antes validar con el get si existe ese dni/apellido-nombre
             List<Cliente> result = mapper.TraerTodos();
@@ -43,6 +43,11 @@ namespace NLayer.Negocio
             cliente.Ape = apellido;
             cliente.Nombre = nombre;
             cliente.Direccion = direccion;
+            cliente.DNI = dni;
+            cliente.Telefono = telefono;
+            cliente.Email = mail;
+            cliente.FechaNacimiento = fechaNachimiento;
+            cliente.Activo = true;
 
             foreach (var item in result)
             {

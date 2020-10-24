@@ -10,15 +10,22 @@ namespace NLayer.Entidades
     [DataContract]
     public class Cliente
     {
+        private string _dni;
         private string _nombre;
         private string _apellido;
         private string _direccion;
-        
+        private string _telefono;
+        private string _mail;
+        private DateTime _fechaNacimiento;
+        private bool _activo;
         
         private int _id;
 
         [DataMember]
         public int Id { get => _id; set => _id = value; }
+
+        [DataMember]
+        public string DNI { get => _dni; set => _dni = value; }
 
         [DataMember]
         public string Nombre { get => _nombre; set => _nombre = value; }
@@ -27,6 +34,13 @@ namespace NLayer.Entidades
         public string Ape { get => _apellido; set => _apellido = value; }
         
         public string Direccion { get => _direccion; set => _direccion = value; }
+        public string Telefono { get => _telefono; set => _telefono = value; }
+
+        public string Email { get => _mail; set => _mail = value; }
+
+        public DateTime FechaNacimiento { get => _fechaNacimiento; set => _fechaNacimiento = value; }
+
+        public bool Activo { get => _activo; set => _activo = value;  }
 
         public override string ToString()
         {

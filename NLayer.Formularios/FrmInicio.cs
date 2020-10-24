@@ -24,5 +24,11 @@ namespace NLayer.Formularios
             forumulario.Show();
             this.Hide();
         }
+
+        private void btnIngresarCliente_Click(object sender, EventArgs e)
+        {
+            FrmAltaCliente formulario = new FrmAltaCliente();
+            formulario.ShowDialog();
+        }
     }
 }

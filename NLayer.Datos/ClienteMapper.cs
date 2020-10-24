@@ -39,14 +39,15 @@ namespace NLayer.Datos
         private NameValueCollection ReverseMap(Cliente cliente)
         {
             NameValueCollection n = new NameValueCollection();
+            n.Add("DNI", cliente.DNI);
             n.Add("Nombre", cliente.Nombre);
             n.Add("Apellido", cliente.Ape);
             n.Add("Direccion", cliente.Direccion);
             n.Add("Usuario", ConfigurationManager.AppSettings["Legajo"]);
-            //n.Add("Email", cliente.Email); // STRING
-            //n.Add("Telefono", cliente.Telefono.ToString()); // INT
-            //n.Add("FechaNacimiento", cliente.FechaNacimiento.ToShortDateString()); // DateTime
-            //n.Add("Activo", cliente.Activo.ToString()); // bool
+            n.Add("Email", cliente.Email); // STRING
+            n.Add("Telefono", cliente.Telefono.ToString()); // INT
+            n.Add("FechaNacimiento", cliente.FechaNacimiento.ToShortDateString()); // DateTime
+            n.Add("Activo", cliente.Activo.ToString()); // bool
             return n;
         }
 

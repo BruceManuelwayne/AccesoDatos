@@ -16,9 +16,9 @@ namespace NLayer.Consola
             {
                 ClienteServicio servicio = new ClienteServicio();
 
-                int cod = servicio.InsertarCliente("Josefina", "Alberdi", "Rios 1122");
+                //int cod = servicio.InsertarCliente("Josefina", "Alberdi", "Rios 1122");
 
-                Console.WriteLine("Se ha insertado el cliente nro "+ cod.ToString());
+                //Console.WriteLine("Se ha insertado el cliente nro "+ cod.ToString());
 
                 List<Cliente> lst = servicio.TraerClientes();
 
