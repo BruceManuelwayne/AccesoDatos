@@ -47,7 +47,7 @@ namespace NLayer.Formularios
 
             try
             {
-                int retorno = _clienteServicio.InsertarCliente(dni, nombre, apellido, direccion, mail, telefono, fechaNacimiento);
+                int retorno = _clienteServicio.InsertarCliente(nombre, apellido, direccion, dni, mail, telefono, fechaNacimiento);
 
                 MessageBox.Show("Cliente se agrego con exito. Cliente ID: " + retorno);
             }
